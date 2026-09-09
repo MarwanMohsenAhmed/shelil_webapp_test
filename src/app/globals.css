@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-fredoka: "Fredoka", "Cairo", cursive, sans-serif;
+  --font-nunito: "Nunito", "Noto Sans Arabic", sans-serif;
+  --font-baloo2: "Baloo 2", "Cairo", cursive, sans-serif;
+  --font-poppins: "Poppins", "Noto Sans Arabic", sans-serif;
+  --font-patrick: "Patrick Hand", "Amiri", cursive, serif;
+  --font-cairo: "Cairo", sans-serif;
+  --font-noto-arabic: "Noto Sans Arabic", sans-serif;
+  --font-amiri: "Amiri", serif;
+
+  --font-display: "Fredoka", "Cairo", cursive, sans-serif;
+  --font-playful: "Baloo 2", "Cairo", cursive, sans-serif;
+  --font-copy: "Nunito", "Noto Sans Arabic", sans-serif;
+  --font-ui: "Poppins", "Noto Sans Arabic", sans-serif;
+  --font-sans: "Nunito", "Noto Sans Arabic", sans-serif;
+
+  --color-ink: #17366d;
+  --color-sky: #e8f7fe;
+  --color-paper: #fdfaf2;
+  --color-cream: #fdfaf2;
+  --color-sun: #ffd326;
+  --color-coral: #ff5c74;
+  --color-tangerine: #ff8d45;
+  --color-leaf: #45bd69;
+  --color-violet: #9565e8;
+  --color-ocean: #39a8ee;
+  --color-mint: #64cfa5;
+}
+
+@layer base {
+  * {
+    border-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-copy);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button,
+  a,
+  input {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .section-container {
+    width: min(1180px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .display-title {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+  }
+
+  .eyebrow {
+    font-size: 0.825rem;
+    font-weight: 800;
+    letter-spacing: 0.025em;
+  }
+
+  .kid-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.8rem;
+    border: 2px solid rgba(23, 54, 109, 0.13);
+    border-radius: 999px;
+    padding: 0.6rem 1.15rem;
+    background: var(--color-sun);
+    color: var(--color-ink);
+    font-size: 0.85rem;
+    font-weight: 800;
+    box-shadow: 0 4px 0 rgba(23, 54, 109, 0.12);
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  }
+
+  .kid-button:hover {
+    background: #ffdf42;
+    box-shadow: 0 6px 0 rgba(23, 54, 109, 0.14);
+    transform: translateY(-2px);
+  }
+
+  .kid-button:focus-visible,
+  .icon-button:focus-visible,
+  .nav-link:focus-visible {
+    outline: 3px solid var(--color-violet);
+    outline-offset: 3px;
+  }
+
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    transition: color 180ms ease, background-color 180ms ease;
+  }
+
+  .float-gently {
+    animation: float-gently 4s ease-in-out infinite;
+  }
+}
+
+@keyframes float-gently {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@layer base {
+  /*
+   * RTL fixes for Arabic script.
+   * Letter-spacing disconnects Arabic letterforms, so it must be
+   * neutralised everywhere when dir="rtl" is active.
+   */
+  html[dir="rtl"] body {
+    letter-spacing: 0 !important;
+  }
+
+  html[dir="rtl"] *,
+  html[dir="rtl"] *::before,
+  html[dir="rtl"] *::after {
+    letter-spacing: 0 !important;
+  }
+
+  /* Flip direction-sensitive shadows so the "press-down" depth
+   * stays visually consistent in RTL. Horizontal offsets are
+   * mirrored; vertical depth is unchanged. */
+  html[dir="rtl"] .kid-button {
+    box-shadow: 0 4px 0 rgba(23, 54, 109, 0.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

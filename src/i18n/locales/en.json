@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "title": "Shelil | The Kids Magazine",
+    "description": "Monthly kids magazine full of amazing stories, fun activities, cool facts and creative ideas — made just for curious minds!"
+  },
+  "nav": {
+    "home": "Home",
+    "issues": "Issues",
+    "stories": "Stories",
+    "activities": "Activities",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "logoLabel": "Shelil - The Kids Magazine",
+    "searchLabel": "Search stories and activities",
+    "logIn": "Log In",
+    "subscribe": "Subscribe",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "hero": {
+    "kicker": "Read + Explore + Grow",
+    "headline": ["Big Dreams", "for Little", "Readers"],
+    "body": "Shelil is a monthly kids magazine full of amazing stories, fun activities, cool facts and creative ideas — made just for curious minds!",
+    "cta": "Explore Latest Issue",
+    "callout": "Stories\nthat make\nkids imagine"
+  },
+  "features": {
+    "greatStories": {
+      "title": "Great Stories",
+      "description": "Exciting tales, real heroes and big adventures"
+    },
+    "funActivities": {
+      "title": "Fun Activities",
+      "description": "Puzzles, crafts, games and more!"
+    },
+    "amazingFacts": {
+      "title": "Amazing Facts",
+      "description": "Discover the world, inside and out"
+    },
+    "creativeCorner": {
+      "title": "Creative Corner",
+      "description": "Draw, make, imagine and express"
+    },
+    "positiveValues": {
+      "title": "Positive Values",
+      "description": "Kindness, friendship and confidence"
+    }
+  },
+  "latestIssue": {
+    "label": "Latest Issue",
+    "newBadge": "New!",
+    "title": "Reach for the Stars!",
+    "body": "This month, we're going on a journey beyond our planet! Discover the wonders of space, meet real-life astronauts, and learn how dreams can take you anywhere.",
+    "cta": "View This Issue",
+    "aside": "Real stories.\nAmazing facts.\nEndless possibilities."
+  },
+  "categories": {
+    "label": "EXPLORE BY CATEGORY",
+    "title": "Something for Every Curious Mind",
+    "cta": "Explore",
+    "items": [
+      {
+        "title": "Stories",
+        "description": "Adventure, friendship, fantasy and more"
+      },
+      {
+        "title": "Science & Nature",
+        "description": "The world around us is full of wonders"
+      },
+      {
+        "title": "Arts & Crafts",
+        "description": "Make, create, be yourself"
+      },
+      {
+        "title": "Games & Puzzles",
+        "description": "Think, solve, have fun"
+      },
+      {
+        "title": "Health & Lifestyle",
+        "description": "Happy kids, healthy lives"
+      }
+    ]
+  },
+  "benefits": {
+    "label": "Why Kids Love Shelil",
+    "title": "Because It's More Than Just a Magazine",
+    "items": ["Fun & Engaging Content", "Beautiful & Colorful Designs", "Made for Their Age", "Sparks Imagination & Confidence"]
+  },
+  "newsletter": {
+    "label": "NEWSLETTER",
+    "title": "Join Our Little Readers Club!",
+    "body": "Get the latest issue, fun extras and special offers straight to your inbox.",
+    "placeholder": "Enter your email address",
+    "submit": "Subscribe",
+    "success": "You're on the list — welcome to the club!"
+  },
+  "footer": {
+    "subscribeNow": "Subscribe Now",
+    "copyright": "© 2026 Shelil Magazine. All rights reserved.",
+    "tagline": "Small readers. Big futures."
+  },
+  "logo": {
+    "tagline": "The Kids Magazine"
+  },
+  "localeSwitcher": {
+    "toggle": "Toggle language"
+  }
+}
